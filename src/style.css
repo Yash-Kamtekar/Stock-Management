@@ -1,0 +1,220 @@
+.clear{
+    clear: both;
+}
+
+a:hover{
+    text-decoration: none !important;
+}
+.btn-custom{
+    padding: 10px 30px;
+    background: #2D3748;
+    color: #EBF8FF;
+    border-radius: 5px;
+    display: inline-block;
+    transition: all 0.4s;
+}
+.btn-custom:hover{
+    background: #D53F8C;
+}
+.chakra-button:focus{
+    box-shadow: none !important;
+}
+
+.profile .chakra-menu__menu-button span{
+    font-size: 30px;
+    margin: 5px 0 0;
+    color: #B83280
+}
+
+/* Top Bar */
+.profile p{
+    line-height: 35px;
+    margin-right: 20px
+}
+
+/* Side Bar Menu */
+.sidenav a{
+    padding: 10px 30px;
+    background: #2D3748;
+    color: #EBF8FF;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    transition: all 0.4s;
+}
+.sidenav a:hover{
+    background: #D53F8C;
+}
+
+/* Users Page - Admin */
+.users table .chakra-spinner{
+    position: absolute;
+    transform: translate(0%, -50%);
+    left: 50%;
+    margin-top: 50px;
+}
+
+/* Add User Page - Admin */
+.react-date-picker{
+    border: 1px solid #e2e8f0;
+    display: block !important;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+.react-date-picker:hover{
+    border-color: #cbd5e0;
+}
+.react-date-picker__wrapper{
+    border: 0 !important;
+}
+
+/* Company Page */
+.company{
+    transition: all 0.4s;
+}
+.company .indiCompany{
+    background: #EDF2F7;
+    border-radius: 5px; 
+    transition: all 0.4s;
+    position: relative;
+}
+.company .indiCompany:hover{
+    background: #718096;
+    color: #EDF2F7;
+    box-shadow: var(--chakra-shadows-lg);
+}
+.company .indiCompany{
+    position: relative;
+}
+.company .indiCompany .deleteIcon{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 15px;
+    display: none;
+    border: 0;
+    z-index: 1;
+}
+.company .indiCompany:hover .deleteIcon{
+    display: block;
+    color: #EDF2F7;
+}
+.company .indiCompany:hover .deleteIcon:hover{
+    background: none;
+}
+
+/* Add Company */
+.modal-form{
+    padding: 0 !important;
+}
+
+
+/* Company Profile */
+.company-profile .banner{
+    height: 450px;
+    overflow: hidden;
+    box-shadow: var(--chakra-shadows-md);
+    background: url("./assets/bg.jpg");
+    background-size: cover;
+}
+.company-profile .company-title{
+    position: relative;
+    width: 100%;
+    padding-left: 10%;
+    padding-top: 40px;
+}
+.company-profile .company-title img{
+    position: relative;
+    width: 280px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 60px;
+}
+.company-profile .company-title p{
+    display: inline-block;
+    font-size: 40px;
+    font-weight: 600;
+}
+.company-profile .tabs{
+    margin-top: 50px;
+}
+.company-profile .tabs .chakra-tabs button:focus{
+    outline: none;
+    box-shadow: none !important;
+}
+
+/* Product Page */
+.product{
+    transition: all 0.4s;
+    margin-bottom: 40px;
+}
+.product .productList a{
+    background: #EDF2F7;
+    border-radius: 5px; 
+    transition: all 0.4s;
+}
+.product .productList a:hover{
+    background: #718096;
+    color: #EDF2F7;
+    box-shadow: var(--chakra-shadows-xl);
+}
+.product .productList a img{
+    max-height: 500px;
+    height: 100vh;
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.product .productList a img:hover{
+    box-shadow: var(--chakra-shadows-xl);
+}
+.product .indiProduct{
+    position: relative;
+    background: #000;
+    border-radius: 5px;
+    transition: all 0.4s;
+}
+.product .indiProduct p{
+    background: #EDF2F7;
+    color: #1a202c;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transition: all 0.4s;
+}
+.product .indiProduct:hover p{
+    background: #718096;
+    color: #fff;
+}
+.product .indiProduct .deleteIcon{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 9;
+    transform: translate(-50%, -50%);
+    display: none;  
+    transition: all 0.4s;
+}
+.product .indiProduct:hover .deleteIcon{
+    display: block;
+}
+
+.product .indiProduct img{
+    transition: all 0.4s;
+}
+.product .indiProduct:hover img{
+    opacity: 0.5;
+}
+
+/* Purchase Page */
+.purchase .btn-add span{
+    font-size: 30px;
+    display: inline-block;
+    line-height: 40px;
+}
+.purchase .btn-add span:first-child{
+    margin-right: 10px;
+}
+.purchase .btn-add span:last-child{
+    margin-left: 10px;
+}
+
+

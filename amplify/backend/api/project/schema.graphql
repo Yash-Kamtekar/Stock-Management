@@ -1,0 +1,55 @@
+type Expenditure @model @auth(rules: [{allow: public}]) @key(name: "byCompany", fields: ["companyID"], queryField: "expendituresByCompany") {
+  id: ID!
+  expenditur: Float!
+  reason: String!
+  companyID: ID
+}
+
+type Sale @model @auth(rules: [{allow: public}]) @key(name: "byCompany", fields: ["companyID"], queryField: "salesByCompany") {
+  id: ID!
+  product: Product! @connection
+  quantity: Float!
+  companyID: ID
+}
+
+type Product @model @auth(rules: [{allow: public}]) @key(name: "byCompany", fields: ["companyID"], queryField: "productsByCompany") {
+  id: ID!
+  name: String!
+  description: String
+  image: String
+  price: Float!
+  quantity: Int!
+  custom_attributes: [AWSJSON]
+  companyID: ID
+}
+
+type Company @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  name: String!
+  description: String
+  owner: User @connection
+  Users: [User] @connection(name:"UserCompany",keyName: "byCompany", fields: ["id"])
+  Products: [Product] @connection(name:"ProductCompany",keyName: "byCompany", fields: ["id"])
+  Sales: [Sale] @connection(keyName: "byCompany", fields: ["id"])
+  Expenditures: [Expenditure] @connection(keyName: "byCompany", fields: ["id"])
+}
+
+type User @model @auth(rules: [{allow: public}]) @key(name: "byCompany", fields: ["companyID"], queryField: "usersByCompany"){
+  id: ID!
+  name: String!
+  email: AWSEmail!
+  birth_date: AWSDate!
+  role: String
+  companyID: ID
+}
+ 
+ type Purchase @model @auth(rules: [{allow: public}]) @key(name: "byCompany", fields: ["companyID"], queryField: "purchasesByCompany") {
+  id: ID!
+  itemsOrdered: String!
+  quantity: Int!
+  dateOfOrder: String
+  supplierDetails: String!
+  totalCost: Int!
+  currentStatus: String
+  companyID: ID
+}
